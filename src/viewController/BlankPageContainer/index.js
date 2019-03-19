@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BlankPage from "../../stories/screens/BlankPage";
+import BlankPage from "../../view/screens/BlankPage";
 
 export default class BlankPageContainer extends Component {
 	render() {

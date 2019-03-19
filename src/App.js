@@ -1,10 +1,10 @@
 import React from "react";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 import { Root } from "native-base";
-import Login from "./container/LoginContainer";
-import Home from "./container/HomeContainer";
-import BlankPage from "./container/BlankPageContainer";
-import Sidebar from "./container/SidebarContainer";
+import Login from "./viewController/LoginContainer";
+import Home from "./viewController/HomeContainer";
+import BlankPage from "./viewController/BlankPageContainer";
+import Sidebar from "./viewController/SidebarContainer";
 
 const Drawer = DrawerNavigator(
 	{

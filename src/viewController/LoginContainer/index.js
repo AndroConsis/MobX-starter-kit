@@ -4,7 +4,7 @@ import {
 } from "native-base";
 import { observer, inject } from "mobx-react/native";
 
-import Login from "../../stories/screens/Login";
+import Login from "../../view/screens/Login";
 
 @inject("loginForm")
 @observer

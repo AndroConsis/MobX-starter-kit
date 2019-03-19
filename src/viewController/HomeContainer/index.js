@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { observer, inject } from "mobx-react/native";
 
-import Home from "../../stories/screens/Home";
+import Home from "../../view/screens/Home";
 import data from "./data";
 
 @inject("mainStore")
