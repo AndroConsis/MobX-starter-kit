@@ -9,15 +9,14 @@ import {
   Icon,
   Left,
   Body,
-  Right,
-  List,
-  ListItem
+  Right
 } from "native-base";
 
 import styles from "./styles";
 
 class Home extends Component {
   render() {
+    const { showError, showLoading, error, loading, list, count } = this.props;
     return (
       <Container style={styles.container}>
         <Header>
@@ -31,24 +30,16 @@ class Home extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Home</Title>
+            <Title>Facts</Title>
           </Body>
-          <Right />
+          <Right>
+            <Title>{count}</Title>
+          </Right>
         </Header>
-        <Content>
-          <List>
-            {this.props.list.map((item, i) => (
-              <ListItem
-                key={i}
-                onPress={() =>
-                  this.props.navigation.navigate("BlankPage", {
-                    name: { item }
-                  })}
-              >
-                <Text>{item}</Text>
-              </ListItem>
-            ))}
-          </List>
+        <Content padder>
+          {showLoading && loading}
+          {showError && error}
+          {list}
         </Content>
       </Container>
     );
